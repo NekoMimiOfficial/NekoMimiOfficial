@@ -19,4 +19,4 @@ It's called NekOS (pronounced nekos) ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ
 ✿Wanna talk, Collab or simply have a chat?  
 Discord is my primary contact method: `NekoMimi#7225`  
 
-Thanks for dropping in <3
+Thanks for dropping by <3
