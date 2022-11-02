@@ -10,7 +10,7 @@ My main programming languages are :
 •Full stack web-dev (HTML CSS PHP JS)  
 •Bash scripts (useful and fast)  
 
-✿I love the PS Vita™ and I'd love to support it as much as I can this I'll make most of projects aimed towards it  
+✿I love the PS Vita™ and I'd love to support it as much as I can thus I'll make most of projects aimed towards it  
 You can find most of my work on @FroscoInnovativeTechnologies  
 
 ❀Currently privately developing a 32bit only Linux distro based on debian buster including apps that I compile to give a more recent version and a custom kernel  
