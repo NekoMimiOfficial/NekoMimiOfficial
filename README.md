@@ -7,10 +7,10 @@ I can be your average artist or your entire IT staff
 My speciality is networking, it's just the most fun thing ever!  
 I also am learning low-level fundamentals by writing a VM!  
 Former admin at discord.gg/mint  
-Am an admin at discord.gg/debian
+Am an admin at discord.gg/debian  
 Really I can be influenced by anything, my projects are completley random but I do have prefrences  
 
-* Contact links at the very bottom ...
+* Contact links at the very bottom ...  
 
 ### kore wo suki!  
 1) Playstation Vita  
@@ -28,8 +28,7 @@ Really I can be influenced by anything, my projects are completley random but I 
 | C++            |        70       |
 | HTML           |        80       |
 | CSS            |       100       |
-5x2table
-... 
+ 
 
 ### Abauwt Neko?  
 My journey with tech started from windows 95 up till windows 10, I call these days the dark era, used to create VBS scripts and games hacked in batch, it aint much but it made me feel like I achieved something...  
@@ -64,17 +63,17 @@ anywhoz, yeah, c++ isn't hard.. dunno maybe I say that cuz I've learned many lan
 yeah.. I created the OpenNDK project.. revive old coding that was optimized af, that is my goal, plus building a really cool project while Im at it kekw  
 At this time my PC broke (physically) and I'm currently in a state where I can't get a new one so Termux has been my friend for a long time (this readme and the OpenNDK project have all been created with termux+nvchad) and well I guess we land at Today, I'm typing this README.md on a shitty 2$ plastic keyboard that is very irritating to type on but hoping that someday I'll afford a PC (kay kay no need simp-athy i get der soon hopfuli)  
 
-The end.
+The end.  
 ..or not?  
 
 # Links!  
 My primary contact method is Discord!  
 Discord `nekomimiofficial`  
-Telegram `@NekoMimiOfficial`
-Instagram `@nekomimiofficial`
+Telegram `@NekoMimiOfficial`  
+Instagram `@nekomimiofficial`  
 
 kay.. you get it.. it's the same everywhere (yes even PSN) 
 
 However if you'd like to stay in touch or chat with other people who use my projects, maybe submit a bug or a feature request, or simply for the sake of my happiness (PLZ)  
-You may join my Discord server (plz)
+You may join my Discord server (plz)  
 Neko's Lab -> [invite](https://discord.com/invite/KFwKPmXJAP) 
