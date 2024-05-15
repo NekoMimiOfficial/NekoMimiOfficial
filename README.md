@@ -6,13 +6,12 @@ To be honest I don't even know what I am kekw
 I can be your average artist or your entire IT staff  
 My speciality is networking, it's just the most fun thing ever!  
 I also am learning low-level fundamentals by writing a VM!  
-Former admin at discord.gg/mint  
-Am an admin at discord.gg/debian  
 Really I can be influenced by anything, my projects are completley random but I do have prefrences  
+note: I left discord so dont expect to see me there  
 
 * Contact links at the very bottom ...  
 
-### kore wo suki!  
+### Intawests :3  
 1) Playstation Vita  
 2) FOSS projects  
 3) Linux  
@@ -32,7 +31,7 @@ Really I can be influenced by anything, my projects are completley random but I 
 
 ### Abauwt Neko?  
 My journey with tech started from windows 95 up till windows 10, I call these days the dark era, used to create VBS scripts and games hacked in batch, it aint much but it made me feel like I achieved something...  
-during the dark era (Win XP) I decided to download XAMPP and learn web dev, AND OH DID I CREATE WEBSITES LIKE IT WAS 1990, then I dived into PHP and it turned into my best friend, I remember writing a library for MySQL but it's lost somewhere  
+during the dark era (Win XP) I decided to download XAMPP and learn web dev, AND OH DID I CREATE WEBSITES LIKE IT WAS 1990, then I dived into PHP and it turned into my best friend, I remember writing a library for MySQL but it's lost somewhere [update: I found it]  
 alright, I finally reached windblows 10 .. 1 hour later .. ALRIGHT GUYS WINDBLOWS REALLY BLOWS SO IT'S TIME FOR THE SWITCH! (note that I did use Linux during the dark era but not as much)  
 First distro: Tiny core linux (liked it tbh)  
 Second distro: DEBIAN!!!! (all time fav till this day)  
@@ -67,13 +66,17 @@ The end.
 ..or not?  
 
 # Links!  
-My primary contact method is Discord!  
+My primary contact method is Emails!  
 Discord `nekomimiofficial`  
 Telegram `@NekoMimiOfficial`  
 Instagram `@nekomimiofficial`  
+  
+Mastodon `@nekomimi@sakurajima.moe` or `@nekomimi@catcatnya.com`  
+E-Mail `nekomimi@tilde.team`  
 
 kay.. you get it.. it's the same everywhere (yes even PSN) 
 
 However if you'd like to stay in touch or chat with other people who use my projects, maybe submit a bug or a feature request, or simply for the sake of my happiness (PLZ)  
-You may join my Discord server (plz)  
-Neko's Lab -> [invite](https://discord.com/invite/KFwKPmXJAP) 
+You can shoot me an email(primary method of contact)  
+or see me on Mastodon(secondary method of contact ig)  
+or if you really wanna have a chattie you can chatter wi'mme on Telegram(I'm there almost daily plus i get notifications as soon as I receive a message)  
