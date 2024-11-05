@@ -66,17 +66,16 @@ The end.
 ..or not?  
 
 # Links!  
-My primary contact method is Emails!  
-Discord `nekomimiofficial`  
-Telegram `@NekoMimiOfficial`  
-Instagram `@nekomimiofficial`  
+Feel free to contact me or follow me in any possible platform!  
+| Service |                          ID                             |
+|---------|---------------------------------------------------------|
+|Discord  |`nekomimiofficial`                                       |
+|Telegram |`@NekoMimiOfficial`                                      |
+|Mastodon |`@nekomimi@sakurajima.moe` or `@nekomimi@catcatnya.com`  |
+|Misskey  |`@nekomimi@catgirls.technology`                          |
+|PSN      |`NekoMimiOfficial`                                       |
+|E-Mail   |`nekomimi@tilde.team`                                    |
   
-Mastodon `@nekomimi@sakurajima.moe` or `@nekomimi@catcatnya.com`  
-E-Mail `nekomimi@tilde.team`  
-
-kay.. you get it.. it's the same everywhere (yes even PSN) 
-
-However if you'd like to stay in touch or chat with other people who use my projects, maybe submit a bug or a feature request, or simply for the sake of my happiness (PLZ)  
-You can shoot me an email(primary method of contact)  
-or see me on Mastodon(secondary method of contact ig)  
-or if you really wanna have a chattie you can chatter wi'mme on Telegram(I'm there almost daily plus i get notifications as soon as I receive a message)  
+Feel free to submit a bug or a feature request in any way possible (preferably right here on GH)  
+Wanna hang out on Discord or ask for support? Join the lab!  
+Neko's Lab -> [invite](https://discord.com/invite/KFwKPmXJAP)  
