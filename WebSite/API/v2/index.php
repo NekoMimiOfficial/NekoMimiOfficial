@@ -5,8 +5,7 @@ $files = glob($dir . '*.*'); // Get all files in the directory
 
 // Check if there are any files in the directory
 if (count($files) == 0) {
-  echo 'No files in "res/" directory';
-  exit();
+  echo 'ERROR: No files in "res/" directory';
 } else {
     // Generate a random index number
     $randIndex = rand(0, count($files) - 1);
@@ -36,6 +35,7 @@ if (count($files) == 0) {
 <meta property="og:image:width" content="<?php echo $width; ?>">
 <meta property="og:image:height" content="<?php echo $height; ?>">
 
-<title><?php echo end($name); ?></title>
-
+<title><?php echo $name; ?></title>
+<h1>Neko Image Viewer 9000 :3</h1>
 <img src = "<?php echo $fileName; ?>">
+<?php echo $fileName; ?>
