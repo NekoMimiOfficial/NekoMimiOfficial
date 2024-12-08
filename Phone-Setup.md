@@ -64,4 +64,19 @@ set lockscreen to Lumine Live-Wallpaper and the homescreen to the Lumine regular
 set the DPI to 400  
 set the font size to the smallest  
 enable gesture navigation  
-
+enable auto dark mode  
+edit lockscreen to show only the face widget (clock) and keep it as close to the google pixel style with a huge clock  
+if possible set battery icon to circle  
+set notification icons to show only the notification count in notification bar  
+  
+and now you should have a UI that is Neko-Certified :3  
+  
+now to the fun part of setting up every app and importing the music library (just get every Deco*27 and YOASOBI song along some others :3)  
+assuming you've setup goog accounts most goog apps should be good to go  
+pair KDE connect devices  
+enable glide typing on gboard  
+import 2FA keys  
+sign in to other apps idk lol  
+  
+aaaaa.. it should be done..  
+and now i can try my luck with some GSIs :3  
