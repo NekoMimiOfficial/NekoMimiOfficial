@@ -3,4 +3,5 @@ async function main() {
   const webui = document.getElementById('mainView');
 
   console.log("async-ly nekofied :3")
+  injectCSS('css/style.css')
 }

@@ -18,6 +18,6 @@ function getData(url) {
       return data;
     })
     .catch(error => {
-      notify('[!]Error getting data from API: ['+url+'] Debug: ['+error+']', 8);
+      notify('[!]Error getting data from API: ['+url+']\nDebug: ['+error+']', 8);
     });
 }

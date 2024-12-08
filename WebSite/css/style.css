@@ -1,0 +1,155 @@
+body{
+  background-color: #101010;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(33, 33, 33, .3);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  max-height: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(33, 33, 33, 1);
+}
+
+.mefp, .neko{
+  height: 64px;
+  width: 64px;
+  border-radius: 10px;
+}
+
+.mefp{
+  position: relative;
+  top: calc((100px - 64px)/4);
+  left: calc((100px - 64px)/4);
+}
+
+.mainView{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.karma{
+  height: 80px;
+  position: fixed;
+  top: 10px;
+  left: 5vw;
+  width: 90vw;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  z-index: 20000;
+}
+
+.neko-greeter{
+  position: relative;
+  bottom: 50%;
+  left: 100px;
+  width: fit-content;
+  transform: translate(0%, 50%);
+}
+
+.feed{
+  height: 100vh;
+  width: 760px;
+  padding-left: 20px;
+  overflow-y: scroll;
+  margin-left: calc((100vw - 760px)/2);
+  position: relative;
+}
+
+.flexingBoxes{
+  width: 720px;
+  height: 760px;
+  position: relative;
+}
+
+.aboutMe{
+  width: 350px;
+  height: 220px;
+  background-color: rgba(33, 33, 33, .3);
+  border-radius: 24px;
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  color: #888888;
+}
+
+.nekofetch{
+  width: 350px;
+  height: 180px;
+  background-color: rgba(33, 33, 33, .3);
+  border-radius: 24px;
+  position: absolute;
+  top: 120px;
+  right: 0px;
+  color: #888888;
+}
+
+.sns{
+  width: 350px;
+  height: 400px;
+  background-color: rgba(33, 33, 33, .3);
+  border-radius: 24px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #888888;
+}
+
+.nekosmartdiv-tm{
+  width: 350px;
+  height: 440px;
+  background-color: rgba(33, 33, 33, .3);
+  border-radius: 24px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: #888888;
+}
+
+.box{
+  box-shadow: 0 0 0 0 rgb(33, 33, 33);
+  transition: 0.4s;
+}
+
+.box:hover{
+  box-shadow: 0 0 18px 2px rgb(33, 33, 33);
+  transition: 0.4s;
+}
+
+.legs{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 720px;
+  height: 80px;
+  position: relative;
+}
+
+.nyaing{
+  position: absolute;
+  bottom: 0px;
+}
+
+.smartselector{
+  width: 350px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: rgba(33, 33, 33, .3);
+  position: absolute;
+  right: 0px;
+}
