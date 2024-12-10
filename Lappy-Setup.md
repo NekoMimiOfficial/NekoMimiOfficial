@@ -4,6 +4,7 @@ but you are fine to copy this environment until NekOS releases :3
 
 # Software  
 - godot engine  
+- google chrome (proprietary)  
 - minetest  
 - minetest headless  
 - blender  
@@ -59,9 +60,10 @@ and apply them all
 setup a top global menu bar as follows:  
 `[launcher][app name][global menu]   [clock]    [system tray][search]`  
 setup a bottom smart hiding dock as follows:  
-`[launcher][icons only task manager]`  
+`[launcher][icons only task manager]` 
+setup a 3x2 virtual desktop grid  
 enable blur and translucency  
-enable wobbling windows  
+enable wobbly windows  
 enable cube and map to `[ctrl][meta][c]`  
 fix plasma settings like disabling true scroll and enabling HDR  
 apply lockscreen and SDDM themes  

@@ -5,7 +5,7 @@ otherwise this is just a self-guide
 # Core  
 install Lawnchair and NekoLawncons  
 apply wallpaper and Lawnchair save file (private)  
-for samsung devices: install: one-hand operations, lockstar, navstar
+for samsung devices: install: one-hand operations, lockstar, navstar  
 for other devices: improvise :3  
 
 # Main apps  
@@ -26,18 +26,20 @@ for other devices: improvise :3
 - MMRL  
 - KDE Connect  
 - MJ PDF  
+- Terraria  
 
 # Secondary apps  
 - Dantotsu  
 - Mihon  
 - Nightwave Plaza  
 - Listen.moe  
+- DualWallpaper (optional)  
 - LoliSnatcher 
 - Termius  
 - Tremotesf  
 - Every Proxy  
 - VLC  
-- ZerTier One  
+- ZeroTier One  
 - Discord  
 - Stack Wallet  
 - any xray client (V2RayNG)  
@@ -63,6 +65,7 @@ set the system font to Google Sans/Product Sans and keep lawnchair on Inter font
 set lockscreen to Lumine Live-Wallpaper and the homescreen to the Lumine regular Wallpaper  
 set the DPI to 400  
 set the font size to the smallest  
+schedule DnD mode from 10pm to 7am  
 enable gesture navigation  
 enable auto dark mode  
 edit lockscreen to show only the face widget (clock) and keep it as close to the google pixel style with a huge clock  
