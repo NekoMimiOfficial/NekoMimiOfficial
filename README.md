@@ -72,6 +72,7 @@ Feel free to contact me or follow me in any possible platform!
 |Discord  |`nekomimiofficial`                                       |
 |Telegram |`@NekoMimiOfficial`                                      |
 |Mastodon |`@nekomimi@sakurajima.moe` or `@nekomimi@catcatnya.com`  |
+|Bluesky  |`@nekomimi.tilde.team`                                   |
 |Misskey  |`@nekomimi@catgirls.technology`                          |
 |PSN      |`NekoMimiOfficial`                                       |
 |E-Mail   |`nekomimi@tilde.team`                                    |
