@@ -51,6 +51,7 @@ if possible everything :3
 - Calendar  
 - Tasks  
 - Snapseed  
+- Files  
 - Photos  
 
 # Setup  
