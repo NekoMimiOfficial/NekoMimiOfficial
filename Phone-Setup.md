@@ -62,7 +62,7 @@ other apps that export saves can be imported (private)
   
 after initial lawnchair setup, set the recents provider using QS  
 set the system font to Google Sans/Product Sans and keep lawnchair on Inter font  
-set lockscreen to Lumine Live-Wallpaper and the homescreen to the Lumine regular Wallpaper  
+set wallpaper to neko kasane teto (or generally any wallpaper from the wallpapers included)
 set the DPI to 400  
 set the font size to the smallest  
 schedule DnD mode from 10pm to 7am  
