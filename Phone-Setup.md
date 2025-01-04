@@ -64,6 +64,9 @@ other apps that export saves can be imported (private)
 after initial lawnchair setup, set the recents provider using QS  
 set the system font to Google Sans/Product Sans and keep lawnchair on Inter font  
 set wallpaper to neko kasane teto (or generally any wallpaper from the wallpapers included)
+set ringtone to no game no life instrumental opening (this game)  
+set alarms with tone: maroe instrumental by daniwellp  
+set notification sound to the custom nyaou sound file (./Android-Files/Sounds/nyaou!.m4a)  
 set the DPI to 400  
 set the font size to the smallest  
 schedule DnD mode from 10pm to 7am  
