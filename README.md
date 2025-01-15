@@ -65,8 +65,19 @@ At this time my PC broke (physically) and I'm currently in a state where I can't
 The end.  
 ..or not?  
 
+# Donations?  
+Neko would usually ask you to donate to a charity if you feel like supporting  
+Which you are encouraged to do, Neko also is in need of some funds to help stay online and keep the power on its laptop, if you'd like to keep that happening feel free to donate crypto to any of the addresses below, 1$ = 1 week of internet.  
+| Wallet         | Address                                                                                           |
+|----------------|---------------------------------------------------------------------------------------------------|
+| Monero (XMR)   | `48T5zbxAto6CbmDebmmFKy5urLyPKjJbuhVWh2fvezzeBpxA64amguXZD7UHkkvMpLEkJB9YC2vvYQekBhdAX9yZ8XigmAb` |
+| Nano (XNO)     | `nano_3kctbzzy6sc1sxtsqp1uamceimsqdy6fd386pcmqgj5ye8sq8137szbigsta`                               |
+| Banano (BAN)   | `ban_1kemc877j9r13r6szaajfxc8jwb7m733fp4bsuy7f3p9oq1ntphowwkzbez4`                                |
+| Stellar (XLM)  | `GCB35SYVJRMSNZJHUGRGVMH3X6JQE6BSXWV7BLSC4T7TK4X2VSIYFUAI`                                        |
+  
+  
 # Links!  
-Feel free to contact me or follow me in any possible platform!  
+Feel free to contact or follow Neko on any possible platform!  
 | Service |                          ID                             |
 |---------|---------------------------------------------------------|
 |Discord  |`nekomimiofficial`                                       |
