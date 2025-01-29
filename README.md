@@ -24,8 +24,8 @@ note: I left discord so dont expect to see me there
 | Language       | Knowledge       |
 |--------------- | --------------- |
 | Python         |        90       |
-| C++            |        70       |
-| HTML           |        95       |
+| C++            |        95       |
+| HTML           |        80       |
 | CSS            |       100       |
  
 
