@@ -1,5 +1,5 @@
 async function notify(msg, timeout){
-  const contentArea = document.getElementById('content');
+  const contentArea = document.getElementById("greeter");
   const notifier = document.createElement('div');
   notifier.className = 'notification';
   notifier.textContent = msg;
@@ -37,4 +37,19 @@ async function injectCSS(css){
   }else{
     notify('[!]Error linking CSS: ['+css+']\nDebug: [ID: '+ranID+' already exists, css file possibly already loaded]', 8);
   }
+}
+
+async function getContentWidth (element) {
+  var styles = getComputedStyle(element)
+
+  return element.clientWidth
+}
+
+async function setGlobalVariable(variable, value) {
+  document.documentElement.style.setProperty(variable, value);
+}
+
+async function getWidthScale() {
+  const scale= await getContentWidth(document.getElementById("greeter")) / 1920
+  return scale
 }
