@@ -3,40 +3,13 @@
 /* NekoMimiOfficial - 5/NOV/2024 */
 /* Catppuccin inspired theme     */
 
+body{
+  background-color: black;
+}
+
 :root{
   --background: #1E1E2E;
-  --text: #CDF;
+  --text: #b4befe;
 
-  --navbar: #1A1A2C;
-  --navbar-blur: #343457;
-
-  --glance-gradient: #171725;
-  --watching: #1A1A2A;
-
-  --button-icon: #CDF;
-  --button-highlight: #3A3A4F;
-  /* --button-highlight: #223; */
-
-  --user-pfp-background: #223;
-  --user-pfp-ring: #2E2E3E;
-  --user-pfp-ring-background: #2E2E3E;
-  --user-pfp-ring-active: var(--Purr);
-
-  --search-bar: #223;
-  --search-bar-blur: #22223377;
-
-  --bobber: #334;
-  --bobber-outline: var(--Blue);
-
-  --notification: var(--Blue);
-  --notification-text: var(--background);
-
-  --Blue: #799DDB;
-  --Red: #F38BA8;
-  --Cyan: #89DCEB;
-  --Pink: #F5C2E7;
-  --Yellow: #F9E2AF;
-  --Orange: #F3B993;
-  --Green: #A2DCAA;
-  --Purr: #C6A1F0;
+  --Purr: #c6c1f0;
 }

@@ -1,6 +1,6 @@
 <?php
 
-$dir = '../v1/res/'; // Set the directory path
+$dir = '../../res/artworks/'; // Set the directory path
 $files = glob($dir . '*.*'); // Get all files in the directory
 
 // Check if there are any files in the directory
