@@ -3,25 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c6c1f0">
+  <meta property="og:title" content="NekoMimi Akiko">
+  <meta property="og:site_name" content="NekoMimi =UwU=">
+  <meta property="description" content="Developer and Artist, Networking and Architectures, feb/2004 F 164.3cm 44.8kg, damn that's a lot of personal info :3">
+  <meta property="og:description" content="Developer and Artist, Networking and Architectures, feb/2004 F 164.3cm 44.8kg, damn that's a lot of personal info :3">
   <link rel="stylesheet" href="./css/themes/nekoppuccin.css">
-  <link rel="stylesheet" href="transitional.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>NekoMimi =UwU=</title>
 </head>
+<script src="./js/UI-Interactive.js"></script>
+<script src="./js/apiTools.js"></script>
+<script src="./js/mainWorker.js"></script>
+<script src="./js/main.js"></script>
 <body>
-  <div id="greet">
-    <div class="info">
-      We are currently rewriting this site<br>stay tuned for amazing stuff
+  <div class="tv" id="tv"></div>
+
+  <div id="greeter">
+    <img src="./res/ui/track.svg" alt="" class="track" id= "track">
+
+    <div class="clock"><div class="time" id="clock">9:41</div></div>
+
+    <div class="welcome" id="iscreen">
+      <div class="nm">NekoMimi</div>
+      <div class="desc">Discover a world of moe<br>and apps in catppuccin<br><br>Ready to begin?</div>
+      <div class="ls" id="link-start"><div id="lst">link start!</div></div>
+      <a class="s" onclick="linkStart()" id="starter">start</a>
     </div>
-    <div class="socials">
-      <font class="nm">NekoMimi</font> &nbsp;
-      <a href="https://github.com/NekoMimiOfficial">Github</a>
-      <a href="https://sakurajima.moe/@nekomimi" rel="me">Mastodon</a>
-      <a href="https://catcatnya.com/@nekomimi">NekoLabs Updates</a>
-      <a href="https://discord.com/invite/KFwKPmXJAP">Discord Lab</a>
-      <a href="mailto://nekomimi@tilde.team">Mail</a>
-    </div>
-    <div class="foot">
-      <div class="feet"><div class="stuff">NekoMimi@NekoLabs 2025(c)</div></div>
+
+    <div class="dock">
+      <div class="paw"><img src="./res/ui/paw.svg" alt=""></div>
+      <div class="sbox"><img src="./res/ui/shine.svg" alt="" class="shimmer"><img src="./res/ui/shine.svg" alt="" class="shine"></div>
+      <div class="links">
+        <a href="https://github.com/NekoMimiOfficial">󰊤</a>
+        <a href="https://sakurajima.moe/@nekomimi" rel="me"></a>
+        <a href="https://catcatnya.com/@nekomimi" rel="me">󰎕</a>
+        <a href="https://discord.gg/KFwKPmXJAP"></a>
+        <a href="mailto://nekomimi@tilde.team">󰶈</a>
+      </div>
     </div>
   </div>
 </body>

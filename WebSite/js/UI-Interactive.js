@@ -70,14 +70,14 @@ async function linkStart() {
   starter.style.animation= "phase1 300ms linear forwards";
   await new Promise(resolve => setTimeout(resolve, 0.6*1000));
   document.getElementById("lst").style.animation= "phase1 200ms linear forwards";
-  await new Promise(resolve => setTimeout(resolve, 0.2*1000));
+  await new Promise(resolve => setTimeout(resolve, 0.3*1000));
   document.getElementById("iscreen").removeChild(starter)
   link_start.style.animation= "phase2 400ms linear forwards";
   await new Promise(resolve => setTimeout(resolve, 0.4*1000));
   const prog= document.createElement("div");
   prog.className= "progress";
   link_start.appendChild(prog);
-  await new Promise(resolve => setTimeout(resolve, 0.4*1000));
+  await new Promise(resolve => setTimeout(resolve, 0.6*1000));
   prog.style.width= "200px";
   await new Promise(resolve => setTimeout(resolve, 0.4*1000));
   prog.style.width= "350px"
@@ -87,7 +87,7 @@ async function linkStart() {
   await new Promise(resolve => setTimeout(resolve, 0.4*1000));
   document.body.removeChild(screen)
   tv.style.animation= "phase3 300ms linear forwards";
-  await new Promise(resolve => setTimeout(resolve, 0.4*1000));
+  await new Promise(resolve => setTimeout(resolve, 1.2*1000));
   tv.style.opacity= "0%";
   tv.className= "vancedTV";
   tv.style.animation= "showVanced 1200ms linear forwards";
@@ -97,7 +97,7 @@ async function linkStart() {
   underC.innerHTML= "Hello, world.";
   underC.style.animation= "showUC 1s linear forwards";
   await new Promise(resolve => setTimeout(resolve, 3*1000));
-  underC.style.animation= "phase1 1s linear forwards";
+  underC.style.animation= "phase1 0.7s linear forwards";
   await new Promise(resolve => setTimeout(resolve, 1.6*1000));
   underC.innerHTML= "More comming soon.";
   underC.style.animation= "showUC 1s linear forwards";

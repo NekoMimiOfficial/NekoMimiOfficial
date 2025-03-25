@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /API/
+Disallow: /res/
+Disallow: /pool/
+Disallow: /repo/
+Disallow: /css/
+Disallow: /js/
+Dsiallow: /favicon.ico
