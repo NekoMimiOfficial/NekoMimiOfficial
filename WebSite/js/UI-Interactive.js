@@ -68,6 +68,7 @@ async function linkStart() {
   const tv= document.getElementById("tv");
 
   starter.style.animation= "phase1 300ms linear forwards";
+  document.body.style.cursor= "wait";
   await new Promise(resolve => setTimeout(resolve, 0.6*1000));
   document.getElementById("lst").style.animation= "phase1 200ms linear forwards";
   await new Promise(resolve => setTimeout(resolve, 0.3*1000));
@@ -83,6 +84,7 @@ async function linkStart() {
   prog.style.width= "350px"
   notify('loading Cardinal v1.0 ...', 2)
   await new Promise(resolve => setTimeout(resolve, 0.8*1000));
+  document.body.style.cursor= "default";
   screen.style.animation= "phase1 200ms linear forwards";
   await new Promise(resolve => setTimeout(resolve, 0.4*1000));
   document.body.removeChild(screen)
@@ -101,4 +103,10 @@ async function linkStart() {
   await new Promise(resolve => setTimeout(resolve, 1.6*1000));
   underC.innerHTML= "More comming soon.";
   underC.style.animation= "showUC 1s linear forwards";
+}
+
+async function navigate (n)
+{
+  const link= document.getElementById("link"+n);
+  link.style.animation= "perdoleBidle .5s linear infinite";
 }

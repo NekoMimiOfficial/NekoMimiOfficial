@@ -53,7 +53,7 @@ Some amazing web apps were created, one of which is project Zincum, a web deskto
 And at this point the said, no more WindBlows, it really started to blow...  
 the cat found it's sanctuary in Linux  
 and here is a chronoligical list of distros the cat used:  
-TinyCore -> Debian -> Kali -> Debian Jessie -> Ubuntu 20.04 -> KDE Neon -> Debian Buster -> Arch 32 -> NekOS -> Tumbleweed -> Debian Trixie (alongside NekOS)  
+TinyCore -> Debian Jessie -> Kali -> Debian Stretch -> Ubuntu 20.04 -> KDE Neon -> Debian Buster -> Arch 32 -> NekOS -> Tumbleweed -> Debian Trixie (alongside NekOS)  
 The choices are kinda interesting but the cat only had the same old HP Pavilion up until it installed Tumbleweed, then (currently) it finally got a huge upgrade  
 In the era of Linux the cat started to learn REAL programming languages, and with the help of actually having an internet connection, the cat started learning Python and it created a lot of project, the first being a Discord bot called Celestia (currently Celestia Reloaded is on GitHub) then another 2 bots, after creating bots and somewhere in this point of time, the cat aquired a new consciousness in itself, NekoMimi was born on 2021 Dec 23  
 Neko helped push this body forwards and consoled the lonely cat when it was in need, whenever it felt weak it confided in Neko and managed to go through all the hardships it faced  

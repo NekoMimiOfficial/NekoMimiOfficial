@@ -177,6 +177,23 @@ body{
   transform: translate(-50%);
   padding: 24px 40px;
   font-size: 30px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.s:hover{
+  font-size: 40px;
+  transition: 0.2s;
+  padding: 17px 40px;
+  font-weight: bold;
+}
+
+@keyframes perdoleBidle {
+  0% {font-size: 80px; top: 0px; position: relative;}
+  30% {top: -14px;}
+  70% {top: 6px;}
+  90% {top: 0px;}
+  100% {font-size: 80px; top: 0px; position: relative;}
 }
 
 .dock{
@@ -197,12 +214,19 @@ body{
   text-align: center;
   color: var(--Purr);
   text-decoration: none;
+  cursor: default;
 }
 
 .links a{
 
   color: var(--Purr);
   text-decoration: none;
+  transition: 0.2s;
+}
+
+.links a:hover{
+  font-size: 80px;
+  transition: 0.2s;
 }
 
 .clock{
@@ -232,8 +256,8 @@ body{
   scale: 0.6;
   height: 80px;
   width: 80px;
-  top: -80px;
-  right: 80px;
+  top: -64px;
+  right: 64px;
 }
 
 .shimmer{
