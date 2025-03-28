@@ -98,7 +98,14 @@ async function linkStart() {
   tv.appendChild(underC);
   underC.innerHTML= "Hello, world.";
   underC.style.animation= "showUC 1s linear forwards";
-  await new Promise(resolve => setTimeout(resolve, 3*1000));
+  await new Promise(resolve => setTimeout(resolve, 1*1000));
+  const light_pprobe= constDiv("pprobe");
+  const light_pprobe_s= constDiv("pprobe_s");
+  const light_pprobe_f= constDiv("pprobe_f");
+  tv.appendChild(light_pprobe);
+  tv.appendChild(light_pprobe_s);
+  tv.appendChild(light_pprobe_f);
+  await new Promise(resolve => setTimeout(resolve, 2*1000));
   underC.style.animation= "phase1 0.7s linear forwards";
   await new Promise(resolve => setTimeout(resolve, 1.6*1000));
   underC.innerHTML= "More comming soon.";

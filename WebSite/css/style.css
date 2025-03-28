@@ -40,7 +40,7 @@ body{
 }
 
 .vancedTV{
-  background-color: var(--background);
+  background: linear-gradient(135deg, var(--background), var(--background), var(--shineBG));
   display: block;
   height: 100vh;
   width: 100vw;
@@ -286,6 +286,66 @@ body{
   width: 10px;
   transition: 0.2s;
   border-radius: 10px;
+}
+
+.pprobe{
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  height: calc(300px * var(--Scale));
+  width: calc(300px * var(--Scale));
+  border-radius: 50%;
+  filter: blur(20px);
+  scale: 0;
+  opacity: 0%;
+  background-color: var(--shinePProbe);
+  animation: pprobein 1000ms linear forwards;
+  animation-delay: 500ms;
+}
+
+.pprobe_s{
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  height: calc(150px * var(--Scale));
+  width: calc(150px * var(--Scale));
+  border-radius: 50%;
+  filter: blur(20px);
+  scale: 0;
+  opacity: 0%;
+  background-color: var(--shinePProbe);
+  animation: pprobeins 1000ms linear forwards;
+  animation-delay: 500ms;
+}
+
+.pprobe_f{
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  height: calc(120px * var(--Scale));
+  width: calc(120px * var(--Scale));
+  border-radius: 50%;
+  filter: blur(20px);
+  scale: 0;
+  opacity: 0%;
+  background-color: var(--shinePProbe);
+  animation: pprobeinf 1100ms linear forwards;
+  animation-delay: 400ms;
+}
+
+@keyframes pprobein {
+  0% {scale: 0.8; opacity: 0%;}
+  100% {scale: 1; opacity: 100%; top: 100px; left: 80px;}
+}
+
+@keyframes pprobeins {
+  0% {scale: 0.8; opacity: 0%;}
+  100% {scale: 1; opacity: 100%; top: 110px; left: 80px;}
+}
+
+@keyframes pprobeinf {
+  0% {scale: 0.8; opacity: 0%;}
+  100% {scale: 1; opacity: 100%; top: 300px; left: 220px;}
 }
 
 @keyframes swirl {
