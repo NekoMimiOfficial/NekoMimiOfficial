@@ -66,8 +66,9 @@ body{
   background-color: var(--backdarker);
   position: absolute;
   top: calc(80px + 14vw);
-  left: 14vw;
-  width: 74vw;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 310px;
   max-height: 120px;
   overflow: hidden;
   border-radius: 20px;
@@ -463,8 +464,8 @@ body{
 
   .links{
     position: absolute;
-    width: 75vw;
     top: -9px;
+    right: -145px;
   }
 
   .links a{
@@ -527,13 +528,13 @@ body{
     left: 50vw;
     border-radius: 40px;
     height: 80px;
-    width: 75vw;
+    width: 310px;
     background-color: var(--backdarker);
     border-bottom: 10px solid var(--PurrDurrX);
   }
 }
 
-@media only screen and (max-height: 666px) {
+@media only screen and (max-height: 750px) {
   .track{
     display: none;
   }
@@ -543,22 +544,55 @@ body{
     position: absolute;
     top: 30vh;
     left: 50vw;
-    transform: translate(-62%, -36%);
+    transform: translate(-62%, -20%);
   }
 
   .links{
     position: absolute;
-    width: 75vw;
-    top: -9px;
+    top: 4px;
+    right: -130px;
+    font-size: 50px;
   }
 
-  .links a{
-    scale: 0.5;
+  .links a:hover{
+    font-size: 50px;
+  }
+
+  .links a:active{
+    animation: none;
+    font-size: 50px;
+  }
+
+  .clock{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100vw;
+    border-radius: 0px;
+  }
+
+  .time{
+    position: relative;
+    font-size: 16px;
+    left: 50vw;
+    top: -20px;
+    transform: translate(-80px, 0%);
   }
 
   .time{
     padding: 30px 50px;
     position: relative;  }
+
+  .dock{
+    position: absolute;
+    bottom: 20px;
+    left: 50vw;
+    height: 80px;
+    width: 340px;
+    border-radius: 30px;
+    background-color: var(--backdark);
+  }
 
   .paw{
     display: none;
