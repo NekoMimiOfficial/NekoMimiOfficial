@@ -9,10 +9,17 @@ body{
 
 :root{
   --background: #1E1E2E;
-  --text: #b4befe;
+  --backdark: #191927;
+  --backdarker: #0f1018;
 
   --shineBG: #4F506A;
   --shinePProbe: #4F506A88;
 
   --Purr: #c6c1f0;
+  --PurrDurr: #ada5f1;
+  --PurrDurrX: #9d92ef;
+
+  --PinkieDinkie: #f3afe0;
+
+  --GreekyDarky: #98e092;
 }

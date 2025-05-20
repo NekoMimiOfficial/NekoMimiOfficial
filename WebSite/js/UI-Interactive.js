@@ -61,6 +61,32 @@ function constDiv(classNameA) {
   return d;
 }
 
+function openFullscreen() {
+  var elem = document.body;
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+
+  document.getElementById("fuller").onclick= closeFullscreen;
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+
+  document.getElementById("fuller").onclick= openFullscreen;
+}
+
 async function linkStart() {
   const starter= document.getElementById("starter");
   const link_start= document.getElementById("link-start");
