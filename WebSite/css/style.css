@@ -26,6 +26,7 @@ body{
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: hidden;
+  background-image: url("/res/ui/paws.svg");
 }
 
 .tv{

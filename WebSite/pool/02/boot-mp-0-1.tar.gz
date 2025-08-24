@@ -1,0 +1,237 @@
+import network
+import os
+import time
+import machine
+import requests
+try:
+    from lib import microNekotainer
+except:
+    class microNekotainer:
+        __version__= "0.1i"
+
+        @staticmethod
+        def format_spec(data):
+            file_conts= ""
+            for key, val in data.items():
+                file_conts += f"{key}(\"{val}\")"
+
+            return file_conts
+
+        @staticmethod
+        def parse_spec(raw: str):
+            raw= raw.strip("\n").strip("\t")
+            skip_b= False
+            new_str: str= ""
+            for c in raw:
+                if c==" " and not skip_b:
+                    continue
+                new_str += c
+                if c == '"':
+                    skip_b= not skip_b
+            data= {}
+            keys= []
+            new_str= new_str.replace("(", "").replace(")", "")
+            for a in new_str.split('"'):
+                keys.append(a)
+            keys.pop(-1)
+            i= 0
+            while i<len(keys):
+                data[keys[i]]= keys[i+1]
+                i += 2
+            return data
+
+coredeps= ("microDNSSrv", "microWebSrv", "microWebSocket", "microWebTemplate", "microNekotainer")
+machine.freq(80000000)
+
+def i_ensure_path_exists(path):
+    import os
+
+    split = path.split("/")
+
+    if not split[0]:
+        split.pop(0)
+        split[0] = "/" + split[0]
+
+    prefix = ""
+    for i in range(len(split) - 1):
+        prefix += split[i]
+        try:
+            os.stat(prefix)
+        except:
+            os.mkdir(prefix)
+        prefix += "/"
+
+def i_chunk(src, dest):
+    buf = memoryview(bytearray(128))
+    while True:
+        n = src.readinto(buf)
+        if n == 0:
+            break
+        dest(buf if n == 128 else buf[:n])
+
+def i_download_file(url, dest):
+    print("Downloading:", url)
+    response = requests.get(url)
+    try:
+        if response.status_code != 200:
+            print("Error", response.status_code, "requesting", url)
+            return False
+
+        print("Copying:", dest)
+        i_ensure_path_exists(dest)
+        with open(dest, "wb") as f:
+            i_chunk(response.raw, f.write)
+
+        return True
+    finally:
+        response.close()
+
+def isUp(url):
+    try:
+        req = requests.get(url)
+
+    except Exception as e:
+        print(e)
+
+        return 0
+
+    return req.status_code
+
+def mkdir_r(name):
+    try:
+        os.mkdir(name)
+    except:
+        pass
+
+def check_dep(name):
+    if name+".py" in os.listdir("lib"):
+        print(f"[ Found ] {name}")
+        return False
+    else:
+        print(f"[ Error ] {name}, not found")
+        return True
+
+def setup_libs():
+    print("checking network connection...", end=" ")
+    if isUp("http://nekomimi.tilde.team/index.html"):
+        print("[ ok ]")
+    else:
+        print("[ fail ]")
+        print("please factory reset the machine and try again")
+        while True:
+            machine.idle()
+            machine.deepsleep()
+
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("Device power on         0x1000")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+root= os.listdir()
+
+if not "lib" in root or not "bin" in root or not "etc" in root or not "var" in root or not "www" in root or not "home" in root:
+    print("first boot detected, creating initial filesystem...")
+    mkdir_r("bin")
+    mkdir_r("etc")
+    mkdir_r("home")
+    mkdir_r("lib")
+    mkdir_r("var")
+    mkdir_r("www")
+    print("downloading base libs...")
+    print("Connect to a netork")
+    print("~~~~~~~~~~~~~~~~~~~")
+    print("available networks:")
+    wifi= network.WLAN()
+    wifi.active(True)
+    while True:
+        available= wifi.scan()
+        ssids= []
+        essids= []
+        for con in available:
+            if con[4]==0:
+                adfo= " (open)"
+            elif con[4]==3:
+                adfo= " (WPA2 PSK)"
+            else:
+                adfo= ""
+            print(con[0].decode()+adfo, end="    ")
+            ssids.append((con[0].decode(), con[4]))
+            essids.append(con[0].decode())
+        print("")
+        choice= input("select SSID to connect to: ")
+        if choice in essids:
+            for ind in ssids:
+                if ind[0]==choice:
+                    if not wifi.isconnected():
+                        if ind[1]==0:
+                            passwd= ""
+                        else:
+                            passwd= input(f"enter password for [{ind[0]}]: ")
+                        wifi.disconnect()
+                        print("connecting...")
+                        wifi.connect(ind[0], passwd)
+                        while wifi.status() == network.STAT_CONNECTING:
+                            machine.idle()
+                        if wifi.status() == network.STAT_GOT_IP:
+                            print("connected")
+                            setup_libs()
+                        elif wifi.status() == network.STAT_WRONG_PASSWORD:
+                            print("incorrect password")
+                        elif wifi.status() == network.STAT_ASSOC_FAIL:
+                            print("failed to associate with access point")
+                        elif wifi.status() == network.STAT_BEACON_TIMEOUT:
+                            print("beacon timeout error")
+                        elif wifi.status() == network.STAT_HANDSHAKE_TIMEOUT:
+                            print("failed to connect, handshake timeout")
+                        elif wifi.status() == network.STAT_CONNECT_FAIL:
+                            print("failed to connect, general error")
+                        else:
+                            print(f"failed to connect, code 0e{wifi.status()}")
+                    else:
+                        print("it appears that you are connected to a network already, skipping")
+                        setup_libs()
+        else:
+            print("chosen ssid not found")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+if len(os.listdir("lib")) < len(coredeps):
+    print("detected missing core dependencies:")
+    i= 0
+    mdep= []
+    for dep in coredeps:
+        if check_dep(dep):
+            i= i+1
+            mdep.append(coredeps[i-1])
+    print(f"missing dependencies: {i}")
+    print(mdep)
+    print("please reinstall MicroNekotainer or add the missing libs manually")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+if not "build.prop" in os.listdir("etc"):
+    print("generating build property file...")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+splash= """\
+ ^ ^  | MicroNekotainer loader [vEVN]
+=UwU= | EDC   external devices detected
+ w w  | ELC   libraries detected
+
+=====================================
+""".replace("EVN", microNekotainer.__version__).replace("EDC", "0").replace("ELC", str(len(os.listdir("lib"))))
+
+print(splash)
+
+if "boot.conf" in os.listdir("etc"):
+    buffer= open("etc/boot.conf", "r")
+    save= microNekotainer.parse_spec(buffer.read())
+    buffer.close()
+    if save["mode"]=="AP":
+        print(f"starting AP {save['ssid']}")
+        ap= network.WLAN(network.AP_IF)
+        ap.config(essid= save["ssid"], security=network.AUTH_WPA2_PSK, password=save["pass"])
+        ap.active(True)
+    elif save["mode"]=="STA":
+        print(f"connecting to network {save['ssid']}")
+        wifi= network.WLAN(network.STA_IF)
+        wifi.active(True)
+        wifi.connect(save["ssid"], save["pass"])
+

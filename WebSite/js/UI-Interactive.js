@@ -134,7 +134,7 @@ async function linkStart() {
   await new Promise(resolve => setTimeout(resolve, 2*1000));
   underC.style.animation= "phase1 0.7s linear forwards";
   await new Promise(resolve => setTimeout(resolve, 1.6*1000));
-  underC.innerHTML= "More comming soon.";
+  underC.innerHTML= "Crafting the interface<br>Stay tuned for awesome things";
   underC.style.animation= "showUC 1s linear forwards";
 }
 

@@ -1,0 +1,109 @@
+import os
+import requests
+
+__version__= "0.1"
+_CHUNK_SIZE = 128
+
+def write(data, file):
+    buffer= open(file, "w")
+    buffer.write(data)
+    buffer.close()
+
+def read(file):
+    buffer= open(file, "r")
+    data= buffer.read()
+    buffer.close()
+    return data
+
+def parse_spec(raw: str):
+    raw= raw.strip("\n").strip("\t")
+    skip_b= False
+    new_str: str= ""
+    for c in raw:
+        if c==" " and not skip_b:
+            continue
+        new_str += c
+        if c == '"':
+            skip_b= not skip_b
+    data= {}
+    keys= []
+    new_str= new_str.replace("(", "").replace(")", "")
+    for a in new_str.split('"'):
+        keys.append(a)
+    keys.pop(-1)
+    i= 0
+    while i<len(keys):
+        data[keys[i]]= keys[i+1]
+        i += 2
+    return data
+
+def format_spec(data):
+    file_conts= ""
+    for key, val in data.items():
+        file_conts += f"{key}(\"{val}\")"
+
+    return file_conts
+
+def exists(filename):
+    try:
+        os.stat(filename)
+        return True
+    except OSError:
+        return False
+
+def dir_exists(filename):
+    try:
+        return (os.stat(filename)[0] & 0x4000) != 0
+    except OSError:
+        return False
+        
+def file_exists(filename):
+    try:
+        return (os.stat(filename)[0] & 0x4000) == 0
+    except OSError:
+        return False
+
+def _ensure_path_exists(path):
+    import os
+
+    split = path.split("/")
+
+    if not split[0]:
+        split.pop(0)
+        split[0] = "/" + split[0]
+
+    prefix = ""
+    for i in range(len(split) - 1):
+        prefix += split[i]
+        try:
+            os.stat(prefix)
+        except:
+            os.mkdir(prefix)
+        prefix += "/"
+
+def _chunk(src, dest):
+    buf = memoryview(bytearray(_CHUNK_SIZE))
+    while True:
+        n = src.readinto(buf)
+        if n == 0:
+            break
+        dest(buf if n == _CHUNK_SIZE else buf[:n])
+
+def download_file(url, dest):
+    response = requests.get(url)
+    try:
+        if response.status_code != 200:
+            print("Error", response.status_code, "requesting", url)
+            return False
+
+        print("Copying:", dest)
+        _ensure_path_exists(dest)
+        with open(dest, "wb") as f:
+            _chunk(response.raw, f.write)
+
+        return True
+    finally:
+        response.close()
+
+if __name__ == '__main__':
+    pass

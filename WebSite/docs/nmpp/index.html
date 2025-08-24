@@ -1,0 +1,174 @@
+<title>NekoMimi Plus Plus!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="height=device-height, initial-scale=1.0">
+
+<style>
+@font-face{
+  font-family: 'HurmitNF';
+  src: url('http://nekomimi.tilde.team/res/ui/HurmitNerdFontMono-Regular.ttf') format('truetype');
+}
+
+body{
+  background-color: #251e2e;
+  color: #cab9ef;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'HurmitNF';
+  overflow-y: hidden;
+}
+
+.hr{
+  background-color: #b283ed;
+  display: block;
+  height: 3px;
+  width: 100%;
+}
+
+.lhr{
+  background-color: #a771eb;
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+
+.viewer{
+  padding: 20px;
+  width: calc(100vw - 40px);
+  position: absolute;
+  display: block;
+  height: 100vh;
+  background-color: #1f1927;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1f1927;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b283ed;
+}
+
+pre{
+  font-family: 'HurmitNF';
+}
+
+.neko{
+  position: absolute;
+  display: block;
+  bottom: 60px;
+  right: 60px;
+  height: 80px;
+  width: 80px;
+  background-color: #b283ed;
+  color: #1f1927;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 56px;
+}
+
+a{
+  color: #b283ed;
+}
+
+@media only screen and (min-width: 600px) {
+  .viewer{
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 800px;
+  }
+}
+</style>
+
+<div class="viewer">
+
+<h1>The library!</h1>
+<p>
+This module aims to make your C++ development easier <br>
+Featuring a lot of helper functions and converters
+</p>
+
+<div class="hr"></div>
+
+<h2>Utils</h2>
+<p>General Utilities and helpers</p><br>
+<h3>[function]&lt;vector&gt;&lt;string&gt; len() -> size_t</h3>
+<p>Takes any vector type or a string and returns the size</p>
+<div class="lhr"></div>
+
+<h2>FileIO</h2>
+<p>Helper for file operations</p><br>
+<h3>[class] File</h3>
+<ul>
+  <li>[constructor]&lt;string&gt; File(filename) -> File</li>
+  <li>[method] get_filename() -> string</li>
+  <li>[method] get_ext() -> string</li>
+  <li>[method] get_size() -> size_t</li>
+  <li>[method] get_vector() -> vector&lt;uint8_t&gt;</li>
+  <li>[method]&lt;size_t&gt; get_byte(position) -> uint_8</li>
+  <li>[method] safe() -> bool</li>
+</ul>
+<h3>[method]&lt;vector&lt;uint8_t&gt;&gt;&lt;string&gt; save_byte(bytes, filename) -> bool</h3>
+<p>
+Save a vector of bytes into a file <br>
+The vector data is uint8_t, saved as binary data
+</p>
+<h3>[method]&lt;vector&lt;uint32_t&gt;&gt;&lt;string&gt; save_byte32(bytes, filename) -> bool</h3>
+<p>
+Save a vector of 4 bytes per slot into a file <br>
+The vector data is uint32_t, saved as binary data
+</p>
+<h3>[method]&lt;string&gt; load_byte(filename) -> vector&lt;uint8_t&gt;</h3>
+<p>
+Load a vector of bytes from a file <br>
+The vector data is uint8_t, loaded as binary data
+</p>
+<h3>[method]&lt;string&gt; load_byte32(filename) -> vector&lt;uint32_t&gt;</h3>
+<p>
+Load a vector of 4 bytes from a file <br>
+The vector data is uint32_t, loaded as binary data
+</p>
+<div class="lhr"></div>
+
+<h2>outTools</h2>
+<p>To be documented later</p><br>
+<h3>[namespace] writer</h3>
+<div class="lhr"></div>
+
+<h2>Operators</h2>
+<p>To be documented later</p><br>
+<h3>[operator] &lt;string&gt;*&lt;int&gt;</h3>
+<h3>[operator] &lt;string&gt;*&lt;long&gt;</h3>
+<div class="lhr"></div>
+
+<h2>Conditions</h2>
+<p>To be documented later</p><br>
+<h3>[method]&lt;string&gt;&lt;string&gt; starts_with(string, prefix) -> bool</h3>
+<div class="lhr"></div>
+
+<h2>Converters</h2>
+<p>To be documented later</p><br>
+<h3>[namespace] convert</h3>
+<div class="lhr"></div>
+
+<h2>BinaryReader</h2>
+<p>To be documented later</p><br>
+<h3>[class] byteReader</h3>
+<div class="lhr"></div>
+
+<center><p>NekoMimi @ NekoLabs 2025 (c) <a href="http://nekomimi.tilde.team/license/nekocense.txt">nekocense</a></p></center>
+
+<br><br>
+</div>
+
+<a href="https://github.com/NekoMimiOfficial/NekoMimi-plus-plus"><div class="neko">󰄛</div></a>

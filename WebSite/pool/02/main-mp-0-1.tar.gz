@@ -1,0 +1,207 @@
+from lib.microDNSSrv import MicroDNSSrv
+from lib.microWebSrv import MicroWebSrv
+from lib import microNekotainer
+from machine import Pin
+import machine
+import os
+
+LED_PIN= Pin(2, Pin.OUT)
+
+if not "boot.conf" in os.listdir("etc"):
+    print("Initial setup...")
+    while True:
+        mode= input("what mode should microNekotainer use? [AP/sta]: ").upper()
+        if mode=="":
+            mode= "AP"
+            break
+        elif mode=="AP" or mode=="STA":
+            break
+        else:
+            print('expected "AP" or "STA"')
+
+    ssid= input("choose ssid [MicroNekotainer Node]: ")
+    if ssid=="":
+        ssid= "MicroNekotainer Node"
+    ssid= ssid.strip('"')
+    
+    if mode=="AP":
+        passw= input("choose password for wireless [nekomimi]: ")
+        if passw=="":
+            passw= "nekomimi"
+        passw= passw.strip('"')
+    else:
+        passw= input("enter ssid password:")
+        passw= passw.strip('"')
+
+    print("=====================================")
+    print("writing configuration:")
+    print(f"Mode: {mode}")
+    print(f"ssid: {ssid}")
+    print(f"pass: {passw}")
+    print("=====================================")
+    print("you can now login to the web panel")
+    print("username: neko")
+    print("password: mimi")
+    print("please change the credentianls asap")
+    data= {'mode': mode, 'ssid': ssid, 'pass': passw}
+    boot_spec= microNekotainer.format_spec(data)
+    boot_buffer= open("etc/boot.conf", "w")
+    boot_buffer.write(boot_spec)
+    boot_buffer.close()
+    passwd_spec= microNekotainer.format_spec({'admin': 'admin'})
+    passwd_buffer= open("etc/passwd", "w")
+    passwd_buffer.write(passwd_spec)
+    passwd_buffer.close()
+    machine.reset()
+
+#===================================================
+DNS_list= {
+        "*nekomimi.com": "192.168.4.1",
+        "*nekomimi.sh": "192.168.4.1",
+        "*google*": "192.168.4.1"
+}
+
+DNS_service= MicroDNSSrv()
+DNS_service.SetDomainsList(DNS_list)
+if DNS_service.Start():
+    print("[  ok  ] DNS service started.")
+else :
+    print("[ fail ] DNS service couldn't be started")
+
+#===================================================
+
+def _acceptWebSocketCallback(webSocket, httpClient) :
+	print("WS ACCEPT")
+	webSocket.RecvTextCallback   = _recvTextCallback
+	webSocket.RecvBinaryCallback = _recvBinaryCallback
+	webSocket.ClosedCallback 	 = _closedCallback
+
+def _recvTextCallback(webSocket, msg) :
+	print("WS RECV TEXT : %s" % msg)
+	webSocket.SendText("Reply for %s" % msg)
+
+def _recvBinaryCallback(webSocket, data) :
+	print("WS RECV DATA : %s" % data)
+
+def _closedCallback(webSocket) :
+	print("WS CLOSED")
+
+@MicroWebSrv.route("/led")
+def _flashLanding(client, response):
+    content="""
+    <form action="/led" method="post">
+    <input type="submit" name="LEDon" value="on"> <input type="submit" name="LEDoff" value="off">
+    </form>
+    """
+    response.WriteResponseOk(contentType= "text/html", content= content)
+
+@MicroWebSrv.route("/led", "POST")
+def _flashHandle(client, response):
+    data= client.ReadRequestPostedFormData()
+    if "LEDon" in data:
+        LED_PIN.value(1)
+    else:
+        LED_PIN.value(0)
+
+    res="""
+    <form action="/led" method="post">
+    <input type="submit" name="LEDon" value="on"> <input type="submit" name="LEDoff" value="off">
+    </form>
+    """
+    response.WriteResponseOk(contentType= "text/html", content= res)
+
+@MicroWebSrv.route("/API/<tool>", "POST")
+def _pageAPI(client, response, args= {}):
+    content = """\
+	<!DOCTYPE html>
+	<html lang=en>
+        <head>
+        	<meta charset="UTF-8" />
+            <title>TEST EDIT</title>
+        </head>
+        <body>
+    """
+    content += "<h1>EDIT item with {} variable arguments</h1>".format(len(args))
+	
+    if 'tool' in args :
+        content += "<p>index = {}</p>".format(args['tool'])
+	
+    content += """
+        </body>
+    </html>
+    """
+    response.WriteResponseOk(headers= None, contentType	= "text/html", contentCharset= "UTF-8", content= content)
+
+
+WEB_service= MicroWebSrv(webPath="www/")
+WEB_service.MaxWebSocketRecvLen= 256
+WEB_service.WebSocketThreaded= True
+WEB_service.AcceptWebSocketCallback= _acceptWebSocketCallback
+WEB_service.Start(threaded= True)
+if WEB_service.IsStarted():
+    print("[  ok  ] Web service started.")
+else:
+    print("[ fail ] Web service couldn't be started")
+
+#===================================================
+print("\n=====================================\nSpawning built-in shell")
+
+os.chdir("/home")
+com= input(f"({os.getcwd()}) $")
+while not com in ["exit", "quit", "halt"]:
+    cmd= com.split(" ")[0]
+    if cmd == "help":
+        print("helped")
+
+    if cmd=="freset":
+        confirm= input("are you sure you want to factory reset? type 'yes im sure': ")
+        if confirm=="yes im sure":
+            os.remove("etc/boot.conf")
+            print("rebooting...")
+            machine.reset()
+        else:
+            print("confirmation incorrect, aborting")
+
+    if cmd=="reboot":
+        machine.reset()
+
+    if cmd=="ls":
+        arg= com.split(" ")
+        cnt= True
+        if len(arg) > 2:
+            print("ls expects up to 1 argument")
+            cnt= False
+        elif len(arg) > 1:
+            if arg[1] in os.listdir():
+                lisres= os.listdir(os.getcwd()+arg[1])
+            else:
+                try:
+                    lisres= os.listdir(arg[1])
+                except:
+                    print("directory not found")
+                    cnt= False
+        else:
+            lisres= os.listdir()
+        if cnt:
+            for item in lisres:
+                print(item, end="   ")
+            print("")
+
+    if cmd=="cd":
+        arg= com.split(" ")
+        cnt= True
+        if len(arg) > 2:
+            print("cd expects up to 1 argument")
+            cnt= False
+        elif len(arg) > 1:
+            if arg[1] in os.listdir():
+                os.chdir(os.getcwd()+arg[1])
+            else:
+                try:
+                    os.chdir(arg[1])
+                except:
+                    print("directory not found")
+        elif cnt:
+            os.chdir("/home")
+
+    com= input(f"({os.getcwd()}) $")
