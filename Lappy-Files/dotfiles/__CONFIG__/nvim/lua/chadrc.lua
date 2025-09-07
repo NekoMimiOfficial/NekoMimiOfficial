@@ -7,7 +7,7 @@ local M = {}
 
 M.base46 = {
 	theme = "catppuccin",
-  transparency = false,
+	transparency = true,
 
 	hl_override = {
 		Comment = { italic = true },
@@ -15,5 +15,43 @@ M.base46 = {
 	},
 
 }
+
+M.nvdash = { load_on_startup = true }
+M.ui = {
+	tabufline = {
+		lazyload = false
+	},
+
+	statusline = {
+		theme = "minimal",
+		separator_style= "block",
+	},
+
+	cmp = {
+		icons = true,
+		lspkind_text = true,
+		style = "atom_colored", -- default/flat_light/flat_dark/atom/atom_colored
+	},
+
+	telescope = { style = "borderless" }, -- borderless / bordered
+}
+
+--local M = {}
+
+--M.base46 = {
+--	theme = "catppuccin",
+--
+--	-- hl_override = {
+--	-- 	Comment = { italic = true },
+--	-- 	["@comment"] = { italic = true },
+--	-- },
+--}
+
+-- M.nvdash = { load_on_startup = true }
+-- M.ui = {
+--       tabufline = {
+--          lazyload = false
+--      }
+--}
 
 return M

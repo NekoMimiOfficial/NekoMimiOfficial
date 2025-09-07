@@ -3,6 +3,7 @@ this list is there to help neko to remember what services it has so it doesnt fo
 
 ```
 * GitHub  
+* GitLab  
 * Discord  
 * Mastodon (sakurajima): although this one doesn't change  
 * Mastodon (catcatnya): also doesn't change  
@@ -16,7 +17,7 @@ this list is there to help neko to remember what services it has so it doesnt fo
 * PyPi: i think that depends on gravatar  
 * Spotify: idk i don't use it  
 * Twitch: abandoned  
-* Steam: vtube studio pfp  
+* Steam  
 ```
 
 that's a damn lot lmao :3  

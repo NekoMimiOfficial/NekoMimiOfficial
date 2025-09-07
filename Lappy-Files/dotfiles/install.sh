@@ -1,4 +1,4 @@
 #!/bin/sh
 
-rsync -r $PWD/__HOME__ $HOME
-rsync -r $PWD/__CONFIG__ $HOME/.config/
+rsync -r __HOME__/* $HOME
+rsync -r __CONFIG__/* $HOME/.config/

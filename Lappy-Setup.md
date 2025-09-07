@@ -6,46 +6,41 @@ but you are fine to copy this environment until NekOS releases :3
 - godot engine  
 - google chrome (proprietary)  
 - minetest  
-- minetest headless  
-- blender  
 - NvChad  
 - android studio  
 - openJDK 17  
 - zerotier one  
-- qv2ray (if needed)  
 - inkscape  
 - gimp  
+- Qt Creator  
+- SimulIDE  
+- steam  
+- sunshine  
+- snapper  
 - krita  
 - OBS  
 - qemu  
 - ranger  
 - libvirtd  
 - virt-manager  
-- varia  
+- aria2  
 - git  
 - tmux  
 - php/apache2  
 - python  
 - gcc/g++ (if not already installed lol)  
-- plasmanya (6 if possible)  
 - kvantum  
-- debootstrap (tho i decided on just using qemu for NekOS development)  
 - npm (cause NvChad)  
-- stack wallet  
-- remmina  
 - scrcpy  
 - libreoffice  
 - audacity  
-- discord  
-- gparted  
+- vesktop  
 - htop  
 - kde connect  
 - mpv  
 - vlc  
 - codecs
 - wine/proton  
-- nvidia stuff (sadge)  
-- terraria (:3)  
 
 # Plasmanya setup  
 assuming you have plasmanya 6:  
@@ -59,12 +54,16 @@ and apply them all
   
 setup a top global menu bar as follows:  
 `[launcher][app name][global menu]   [clock]    [system tray][search]`  
+or  
+`[launcher][app name][global menu]    [network speed][system tray][clock][search]`  
 setup a bottom smart hiding dock as follows:  
 `[launcher][icons only task manager]` 
 setup a 3x2 virtual desktop grid  
 enable blur and translucency  
 enable wobbly windows  
+enable magic lamp  
 enable cube and map to `[ctrl][meta][c]`  
+enable thumbnail aside and map to `[ctrl][meta][t]`  
 fix plasma settings like disabling true scroll and enabling HDR  
 apply lockscreen and SDDM themes  
   

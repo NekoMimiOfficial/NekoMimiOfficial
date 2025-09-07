@@ -11,11 +11,9 @@ for other devices: improvise :3
 # Main apps  
 - VTube Studio  
 - Material Files  
-- Obtanium  
 - Namida  
-- InnerTune  
+- OpenTune  
 - Moshidon  
-- Bluesky  
 - Shizuku  
 - Magisk  
 - Aegis  
@@ -23,26 +21,20 @@ for other devices: improvise :3
 - QuickSwitch  
 - Rounded Corners  
 - LSposed  
-- MMRL  
 - KDE Connect  
 - MJ PDF  
-- Terraria  
 
 # Secondary apps  
 - Dantotsu  
 - Mihon  
 - Nightwave Plaza  
-- Listen.moe  
 - DualWallpaper (optional)  
-- LoliSnatcher 
 - Termius  
 - Tremotesf  
 - Every Proxy  
 - VLC  
 - ZeroTier One  
-- Discord  
-- Stack Wallet  
-- any xray client (V2RayNG)  
+- Revenge  
 - Termux (if enough storage is available)  
 
 # Gapps  

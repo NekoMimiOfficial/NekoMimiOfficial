@@ -50,15 +50,15 @@ some interactive games were made, they kinda felt like a visual novel but with t
 A long time passes and now it's the WindBlows 7 era, now the cat had limited access to the internet, and with the knowledge of Jeeves the cat managed to download XAMPP and setup a web server, a website full of geocities vibes had emerged, it was pure HTML full of colors and a backgound of space, the current Neko wishes it still had a copy but unfortunatley she doesn't  
 HTML wasn't enough, the cat wanted to go fully into the programming part, and like a sane person it chose PHP over JS :3  
 Some amazing web apps were created, one of which is project Zincum, a web desktop with applettes, all PHP based with no JS (minimal JS at least)  
-And at this point the said, no more WindBlows, it really started to blow...  
+And at this point the cat said, no more WindBlows, it really started to blow...  
 the cat found it's sanctuary in Linux  
 and here is a chronoligical list of distros the cat used:  
-TinyCore -> Debian Jessie -> Kali -> Debian Stretch -> Ubuntu 20.04 -> KDE Neon -> Debian Buster -> Arch 32 -> NekOS -> Tumbleweed -> Debian Trixie (alongside NekOS)  
+TinyCore -> Debian Jessie -> Kali -> Debian Stretch -> Ubuntu 20.04 -> KDE Neon -> Debian Buster -> Arch 32 -> NekOS -> Tumbleweed -> KDE Neon (24.04LTS)  
 The choices are kinda interesting but the cat only had the same old HP Pavilion up until it installed Tumbleweed, then (currently) it finally got a huge upgrade  
 In the era of Linux the cat started to learn REAL programming languages, and with the help of actually having an internet connection, the cat started learning Python and it created a lot of project, the first being a Discord bot called Celestia (currently Celestia Reloaded is on GitHub) then another 2 bots, after creating bots and somewhere in this point of time, the cat aquired a new consciousness in itself, NekoMimi was born on 2021 Dec 23  
 Neko helped push this body forwards and consoled the lonely cat when it was in need, whenever it felt weak it confided in Neko and managed to go through all the hardships it faced  
 the cat made a new meaning for itself, the cat now became the embodiment of NekoMimi and sought to be what it saw in Neko, the ideal perfect cat that helped everyone and never showed any weakness, and thus the two became an inseparable entity for eternity  
-In this time Neko created it first very successful project, the VitaDockLite project and it felt very content  
+In this time Neko created its first successful project, the VitaDockLite project and it felt very content  
 Neko didn't stop here as she loved networking and low level fundamentals so she decided to learn more things and ended up creating some network protocols and projects along a VM that helped set in stone the low level knowledge it sought to obtain  
 From now on Neko started to accumulate more knowledge of various subjects and created more projects  
 Some of these are really interesting like the "Initial D VFS Tools" which contained deep knowledge about pure binary data storage and raw data manipulation  
@@ -71,6 +71,15 @@ Neko will continue to be the Neko it sought to become.
 To a bright future  
 Neko~  
   
+# Licenses  
+All the files under the `Assets/` folder are licensed under the Nekocense license, which protects trademarks, this means:
+- You can not use the `neko_emblem_symbolic` or any of the other assets as your own  
+- You may use `neko_emblem_symbolic` as a base for a new icon, you must still include the same license with the new asset  
+- You can not claim ownership of the assets  
+- You may use the assets as the license allows you to  
+- You may NOT in any way profit from using the assets in your projects or standalone, this also includes ad money  
+- You may use the assets in your projects if you mention the original creator (me) with a link to my contacts (or github/website)  
+
 # Donations?  
 Neko would usually ask you to donate to a charity if you feel like supporting  
 Which you are encouraged to do, Neko also is in need of some funds to help stay online and keep the power on its laptop, if you'd like to keep that happening feel free to donate crypto to any of the addresses below, 1$ = 1 week of internet.  
