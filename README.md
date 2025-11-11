@@ -74,6 +74,7 @@ Neko~
 # Licenses  
 All the files under the `Assets/` folder are licensed under the [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) license  
 All the files under the `WebSite/` folder are licensed as stated in the `LICENSE-Website` file  
+Any media file be it an image, video, PDF, sound and the likes of what is considered "multimedia" is licensed the same as the files in the `Assets/` folder  
 
 # Donations?  
 Neko would usually ask you to donate to a charity if you feel like supporting  
