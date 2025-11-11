@@ -41,7 +41,7 @@ body{
 }
 
 .vancedTV{
-  background: linear-gradient(135deg, var(--background), var(--background), var(--shineBG));
+  background-color: var(--backdark);
   display: block;
   height: 100vh;
   width: 100vw;
@@ -50,6 +50,11 @@ body{
 @keyframes showVanced {
   0% {opactiy: 0%;}
   100% {opacity: 100%;}
+}
+
+@keyframes becomePurr{
+  0% {background-color: var(--backdark); opacity: 1;}
+  100% {background-color: var(--PurrDurr); opacity: 1;}
 }
 
 .stayTuned{
@@ -369,19 +374,20 @@ body{
   display: none;
 }
 
-@keyframes pprobein {
-  0% {scale: 0.8; opacity: 0%;}
-  100% {scale: 1; opacity: 100%; top: 100px; left: 80px;}
+.splasher{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  animation: splashing 4s linear forwards;
 }
 
-@keyframes pprobeins {
-  0% {scale: 0.8; opacity: 0%;}
-  100% {scale: 1; opacity: 100%; top: 110px; left: 80px;}
-}
-
-@keyframes pprobeinf {
-  0% {scale: 0.8; opacity: 0%;}
-  100% {scale: 1; opacity: 100%; top: 300px; left: 220px;}
+@keyframes splashing{
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 @keyframes swirl {

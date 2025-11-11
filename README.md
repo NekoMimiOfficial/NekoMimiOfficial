@@ -72,13 +72,8 @@ To a bright future
 Neko~  
   
 # Licenses  
-All the files under the `Assets/` folder are licensed under the Nekocense license, which protects trademarks, this means:
-- You can not use the `neko_emblem_symbolic` or any of the other assets as your own  
-- You may use `neko_emblem_symbolic` as a base for a new icon, you must still include the same license with the new asset  
-- You can not claim ownership of the assets  
-- You may use the assets as the license allows you to  
-- You may NOT in any way profit from using the assets in your projects or standalone, this also includes ad money  
-- You may use the assets in your projects if you mention the original creator (me) with a link to my contacts (or github/website)  
+All the files under the `Assets/` folder are licensed under the [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) license  
+All the files under the `WebSite/` folder are licensed as stated in the `LICENSE-Website` file  
 
 # Donations?  
 Neko would usually ask you to donate to a charity if you feel like supporting  

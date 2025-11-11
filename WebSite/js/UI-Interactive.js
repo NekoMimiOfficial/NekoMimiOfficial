@@ -119,23 +119,14 @@ async function linkStart() {
   tv.style.opacity= "0%";
   tv.className= "vancedTV";
   tv.style.animation= "showVanced 1200ms linear forwards";
-  await new Promise(resolve => setTimeout(resolve, 1.6*1000));
-  const underC= constDiv("stayTuned");
-  tv.appendChild(underC);
-  underC.innerHTML= "Hello, world.";
-  underC.style.animation= "showUC 1s linear forwards";
-  await new Promise(resolve => setTimeout(resolve, 1*1000));
-  const light_pprobe= constDiv("pprobe");
-  const light_pprobe_s= constDiv("pprobe_s");
-  const light_pprobe_f= constDiv("pprobe_f");
-  tv.appendChild(light_pprobe);
-  tv.appendChild(light_pprobe_s);
-  tv.appendChild(light_pprobe_f);
   await new Promise(resolve => setTimeout(resolve, 2*1000));
-  underC.style.animation= "phase1 0.7s linear forwards";
-  await new Promise(resolve => setTimeout(resolve, 1.6*1000));
-  underC.innerHTML= "Crafting the interface<br>Stay tuned for awesome things";
-  underC.style.animation= "showUC 1s linear forwards";
+  const splash= document.createElement("img");
+  splash.src= "./res/ui/splash.png"
+  splash.className= "splasher";
+  tv.appendChild(splash);
+  await new Promise(resolve => setTimeout(resolve, 4.6*1000));
+  tv.style.animation= "becomePurr 1s linear forwards";
+  await new Promise(resolve => setTimeout(resolve, 0.8*1000));
 }
 
 async function navigate (n)
