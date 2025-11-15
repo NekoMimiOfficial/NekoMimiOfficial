@@ -14,7 +14,7 @@ if (count($files) == 0) {
     $randFile = $files[$randIndex];
     
     // Display the random file name
-    $fileName = 'http://nekomimi.tilde.team/API/v1/res/' . basename($randFile);
+    $fileName = 'http://nekomimi.tilde.team/res/artworks/' . basename($randFile);
 }
 
 

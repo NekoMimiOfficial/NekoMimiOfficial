@@ -88,6 +88,7 @@ function closeFullscreen() {
 }
 
 async function linkStart() {
+  const dev_wid= await getContentWidth(document.getElementById("greeter"))
   const starter= document.getElementById("starter");
   const link_start= document.getElementById("link-start");
   const screen= document.getElementById("greeter");
@@ -126,7 +127,17 @@ async function linkStart() {
   tv.appendChild(splash);
   await new Promise(resolve => setTimeout(resolve, 4.6*1000));
   tv.style.animation= "becomePurr 1s linear forwards";
-  await new Promise(resolve => setTimeout(resolve, 0.8*1000));
+  await new Promise(resolve => setTimeout(resolve, 1.6*1000));
+
+  if (!(dev_wid < 600))
+  {window.location.replace("neko-land.html");}
+
+  else
+  {
+    const unsupport= document.createElement("h1");
+    unsupport.innerText= "Unsupported Device";
+    tv.appendChild(unsupport);
+  }
 }
 
 async function navigate (n)
