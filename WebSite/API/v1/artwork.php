@@ -34,6 +34,7 @@ if (count($files) == 0) {
 <meta property="og:image" content="<?php echo $fileName; ?>">
 <meta property="og:image:width" content="<?php echo $width; ?>">
 <meta property="og:image:height" content="<?php echo $height; ?>">
+<meta name="twitter:card" content="summary_large_image">
 
 <title><?php echo $name; ?></title>
 <h1>Neko Image Viewer 9000 :3</h1>
