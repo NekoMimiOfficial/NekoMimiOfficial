@@ -1,90 +1,72 @@
 # Neko's typical setup on a Lappy  
-so this is more of a guide for myself for when i wanna distro hop  
-but you are fine to copy this environment until NekOS releases :3  
+Since Neko tried a lot of things after this was written Neko decided to make this into an app list plus one of her favorite plasma setups  
 
 # Software  
 - godot engine  
 - google chrome (proprietary)  
-- minetest  
+- DB browser for sqlite  
 - NvChad  
 - android studio  
 - openJDK 17  
-- zerotier one  
 - inkscape  
 - gimp  
-- Qt Creator  
 - SimulIDE  
 - steam  
 - sunshine  
 - snapper  
 - krita  
+- kmail  
 - OBS  
-- qemu  
 - ranger  
 - libvirtd  
 - virt-manager  
-- aria2  
 - git  
 - tmux  
-- php/apache2  
-- python  
-- gcc/g++ (if not already installed lol)  
+- feishin  
+- lmms  
 - kvantum  
-- npm (cause NvChad)  
 - scrcpy  
+- firejail  
+- firetools  
 - libreoffice  
 - audacity  
 - vesktop  
-- htop  
+- okteta  
+- btop  
+- hyfetch  
 - kde connect  
 - mpv  
 - vlc  
-- codecs
 - wine/proton  
 
-# Plasmanya setup  
-assuming you have plasmanya 6:  
-- install MacVentura light and dark themes  
-- install oreo black border cursor  
-- install tela (manjaro) icons  
-- install Inter font (or Google/Product sans)  
-- install Terminess font  
-- install BigSur GTK theme  
-and apply them all  
+# Plasma Setup  
+first... remove everything... EVERYTHING!!!  
+now lets create 2 panels, a 32px panel at the top and a 62px panel at the bottom  
+the top panel will contain:  
+```
+[Application title bar] [Window title] [global menu]        [color picker] [IP address display plus] [Network bandwith DBUS widget] [system tray] [clock] [search]
+```
+the bottom panel contains the icons only task manager  
+add a panel colorizer to the top panel and use the theme provided in the Files folder  
   
-setup a top global menu bar as follows:  
-`[launcher][app name][global menu]   [clock]    [system tray][search]`  
-or  
-`[launcher][app name][global menu]    [network speed][system tray][clock][search]`  
-setup a bottom smart hiding dock as follows:  
-`[launcher][icons only task manager]` 
-setup a 3x2 virtual desktop grid  
-enable blur and translucency  
-enable wobbly windows  
-enable magic lamp  
-enable cube and map to `[ctrl][meta][c]`  
-enable thumbnail aside and map to `[ctrl][meta][t]`  
-fix plasma settings like disabling true scroll and enabling HDR  
-apply lockscreen and SDDM themes  
-  
-and you are good to go assuming you have set the wallpaper to HOLOREVE COLLECTION NO.3  
+on the desktop we set a wallpaper and do nothing else, the desktop remains empty of icons and widgets, the panels are set to be always hidden  
 
-# Second iteration Plasmanya setuwp :3  
-This time it's a nordic theme:
-- install utterly nord kvantum, plasma theme  
-- install utterly dark rounded aurorae (window decorations) theme  
-- install tela nordic circle icon theme  
-- install utterly nord SDDM theme
-- install oreo black border cursor  
-- install the google (product sans) font  
-apply them all  
+as for the theme:  
+- colors: catppuccin.mocha (accent color from wallpaper)  
+- application style: kvantum-dark (catppucin-mocha-lavender)  
+- plasma style: utterly-round  
+- window decorations: breeze (very large shadow, medium outline, hide window title bar for Window Class Name ".*", remove all title bar buttons)  
+- icons: tela circle  
+- cursors: apple-cursors.  
+- system sounds: NekoPanjareh  
+- splash screen: Catppucin Mocha  
+- login screen: Catppucin Mocha  
+- boot splash: BGRT (custom kde neon bgrt)  
   
-setup a bottom panel with the following:  
-`[launcher][global menu] 	[icons only task manager] 	[time only clock][system tray]`  
-enable all the desktop effects in the previous iteration  
-also set lagtrain as the splash :3  
-there is a modified nordic Felix Argyle wallpaper, apply that  
-and you're done :3  
+then you immediately enable wobbly windows at stiffness:6, Drag:80, Move Factor:9  
+set window open and close animations to the TV Effect  
+make animations speed one notch slower than the default settings  
+create a 3x2 grid of virtual desktops  
 
-# Other setup  
-change branch to dotfiles and do rsync  
+  
+congrats you now have a very kool and awesome theme that requires you to always use the keyboard :3  

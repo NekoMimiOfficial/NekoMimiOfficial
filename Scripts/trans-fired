@@ -1,0 +1,19 @@
+#!/bin/bash
+
+killall socat 2>/dev/null
+firejail --noprofile --net=wlp60s0 --dns=8.8.8.8 transmission-qt "$@" &
+MAIN_PID=$!
+sleep 3
+
+TARGET_PID=$(pgrep -f 'firejail.*transmission-qt' | tail -n 1)
+
+if [ -n "$TARGET_PID" ]; then
+    socat TCP4-LISTEN:9091,fork,reuseaddr EXEC:"firejail --join=$TARGET_PID nc -w 1 localhost 9091" &
+    BRIDGE_PID=$!
+    echo "Bridge started on PID $BRIDGE_PID"
+fi
+
+wait $MAIN_PID
+
+echo "Transmission closed. Cleaning up bridge..."
+kill $BRIDGE_PID 2>/dev/null

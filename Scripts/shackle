@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Error: Exactly one argument is required."
+    echo "Usage: $0 <on/off>"
+    exit 1
+fi
+
+if [ "$1" != "on" ] && [ "$1" != "off" ] && [ "$1" != "bal"  ]; then
+    echo "Error: Invalid argument."
+    echo "Usage: $0 <on/off>"
+    exit 1
+fi
+
+if [ "$1" = "on" ]; then
+    pkexec bash -c "echo 20 | tee /sys/devices/system/cpu/intel_pstate/max_perf_pct; echo 20 | tee /sys/devices/system/cpu/intel_pstate/min_perf_pct; echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo"
+fi
+
+if [ "$1" = "off" ]; then
+    pkexec bash -c "echo 100 | tee /sys/devices/system/cpu/intel_pstate/max_perf_pct; echo 100 | tee /sys/devices/system/cpu/intel_pstate/min_perf_pct; echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo"
+fi
+
+if [ "$1" = "bal" ]; then
+    pkexec bash -c "echo 20 | tee /sys/devices/system/cpu/intel_pstate/max_perf_pct; echo 20 | tee /sys/devices/system/cpu/intel_pstate/min_perf_pct; echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo"
+fi

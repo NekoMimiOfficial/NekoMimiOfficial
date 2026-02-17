@@ -3,7 +3,7 @@ aight so for everyone who wants to get a similar experience to what neko uses ev
 otherwise this is just a self-guide  
 
 # Core  
-install Lawnchair and NekoLawncons  
+install Nekome (LC14 ESR) and Nekomecons  
 apply wallpaper and Lawnchair save file (private)  
 for samsung devices: install: one-hand operations, lockstar, navstar  
 for other devices: improvise :3  
@@ -71,7 +71,7 @@ set notification icons to show only the notification count in notification bar
 and now you should have a UI that is Neko-Certified :3  
   
 now to the fun part of setting up every app and importing the music library (just get every Deco*27 and YOASOBI song along some others :3)  
-assuming you've setup goog accounts most goog apps should be good to go  
+assuming you've setup el goog accounts most el goog apps should be good to go  
 pair KDE connect devices  
 enable glide typing on gboard  
 import 2FA keys  
