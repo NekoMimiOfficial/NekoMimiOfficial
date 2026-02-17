@@ -1,6 +1,6 @@
 # THE INDEKO CODIFICATION PROTOCOL
-# An Architectural Manifesto for Sovereign Source Code Orchestration
-# Version: 1.3
+## An Architectural Manifesto for Sovereign Source Code Orchestration
+## Version: 1.3
 
 I. PHILOSOPHICAL ORIENTATION: THE INDEKO ETHER
 The Indeko Indent Syntax is a totalizing structural philosophy. It rejects the chaotic "organic" growth of source code in favor of a rigid, geometric purity. In the Indeko Ether, white space is not "nothingness"—it is a structural adhesive. Every character must exist in a state of intentional proximity or calculated isolation. This protocol governs the micro-interaction of symbols to ensure the source code transcends mere instruction and becomes an artifact of architectural excellence.
